@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root {
+  --heading: hsl(213, 96%, 18%);
+  --Purplish-blue: hsl(243, 100%, 62%);
+  --Pastel-blue: hsl(228, 100%, 84%);
+  --bg-circle: hsl(206, 94%, 87%);
+  --Strawberry-red: hsl(354, 84%, 57%);
+  --paragraph: hsl(231, 11%, 63%);
+  --Light-gray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Light-gray);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+  max-width: min-content;
+  margin: 50px auto;
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  background-color: white;
+}
+
+.sidebar {
+  width: 300px;
+  border-radius: 10px;
+  background: url(/assets/images/bg-sidebar-desktop.svg);
+  background-size: cover;
+  height: 800px;
+  padding: 40px;
+}
+
+.breadcumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step_wrapper {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.step_number {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.active {
+  background-color: var(--bg-circle);
+  color: black;
+  font-weight: bold;
+  transition: ease-in 0.2s;
+}
+
+.step_detail_head {
+  color: var(--paragraph);
+  font-size: 13px;
+}
+
+.step_detail_text {
+  color: white;
+  font-size: 16px;
+}
+
+.main {
+  padding: 0 100px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section_button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.next_button {
+  background-color: var(--heading);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+}
+
+.back_button {
+  border: none;
+  border-radius: 7px;
+  color: var(--paragraph);
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.section_content {
+  display: flex;
+  justify-content: center;
+}
