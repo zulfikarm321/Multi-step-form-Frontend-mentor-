@@ -15,52 +15,247 @@
   </head>
   <body>
     <div class="container">
-      <div class="sidebar">
-        <div class="breadcumbs">
+      <aside>
+        <div class="step_list">
           <div class="step_wrapper">
-            <div class="step_number active">1</div>
-            <div class="step_detail">
-              <p class="step_detail_head">STEP 1</p>
-              <p class="step_detail_text">YOUR INFO</p>
-            </div>
+            <div class="step_circle">1</div>
+            <article>
+              <span>STEP 1</span>
+              <p>YOUR INFO</p>
+            </article>
           </div>
           <div class="step_wrapper">
-            <div class="step_number">2</div>
-            <div class="step_detail">
-              <p class="step_detail_head">STEP 2</p>
-              <p class="step_detail_text">SELECT PLAN</p>
-            </div>
+            <div class="step_circle">2</div>
+            <article>
+              <span>STEP 2</span>
+              <p>SELECT PLAN</p>
+            </article>
           </div>
           <div class="step_wrapper">
-            <div class="step_number">3</div>
-            <div class="step_detail">
-              <p class="step_detail_head">STEP 3</p>
-              <p class="step_detail_text">ADD-ONS</p>
-            </div>
+            <div class="step_circle">3</div>
+            <article>
+              <span>STEP 3</span>
+              <p>ADD-ONS</p>
+            </article>
           </div>
           <div class="step_wrapper">
-            <div class="step_number">4</div>
-            <div class="step_detail">
-              <p class="step_detail_head">STEP 4</p>
-              <p class="step_detail_text">SUMMARY</p>
-            </div>
+            <div class="step_circle">4</div>
+            <article>
+              <span>STEP 4</span>
+              <p>SUMMARY</p>
+            </article>
           </div>
         </div>
-      </div>
-      <div class="main">
-        <div class="section_content"></div>
-        <div class="section_button">
-          <button class="back_button">Go Back</button>
-          <button class="next_button">Next Step</button>
+      </aside>
+      <main>
+        <!-- STEP 1 START -->
+        <div class="main_content content_1">
+          <section>
+            <header>
+              <h1 class="text_blue">Personal info</h1>
+              <p class="text_gray">
+                Please provide your name, email address, and phone number
+              </p>
+            </header>
+            <form action="#" class="personal_form">
+              <div class="form_control">
+                <div class="form_label">
+                  <label for="name" class="text_blue">Name</label>
+                  <div class="error_text">This field is required</div>
+                </div>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="e.g. Zulfikar Muhamad"
+                  class="form_input"
+                />
+              </div>
+              <div class="form_control">
+                <div class="form_label">
+                  <label for="email" class="text_blue">Email Address</label>
+                  <div class="error_text">This field is required</div>
+                </div>
+                <input
+                  type="text"
+                  id="email"
+                  placeholder="e.g. zulfikarmuhamad@gmail.com"
+                  class="form_input"
+                />
+              </div>
+              <div class="form_control">
+                <div class="form_label">
+                  <label for="phone" class="text_blue">Phone Number</label>
+                  <div class="error_text">This field is required</div>
+                </div>
+                <input
+                  type="text"
+                  id="phone"
+                  placeholder="e.g. +62 1234 3456 3456"
+                  class="form_input"
+                />
+              </div>
+            </form>
+          </section>
+
+          <div class="buttons">
+            <button class="btn_next" type="submit">Next Step</button>
+          </div>
         </div>
-      </div>
+        <!-- STEP 1 END -->
+
+        <!-- STEP 2 START -->
+        <div class="main_content content_2">
+          <section>
+            <header>
+              <h1 class="text_blue">Select your plan</h1>
+              <p class="text_gray">
+                You have the option of monthly of yearly billing.
+              </p>
+            </header>
+            <div class="plans_wrapper">
+              <div class="plan_box plan_box_selected" id="Arcade">
+                <div class="plan_image">
+                  <img src="/assets/images/icon-arcade.svg" alt="Arcade" />
+                </div>
+                <div class="plan_details">
+                  <h4 class="text_blue">Arcade</h4>
+                  <p class="text_gray plan_price">$9/mo</p>
+                  <p class="text_blue plan_free_text">2 months free</p>
+                </div>
+              </div>
+              <div class="plan_box" id="Advanced">
+                <div class="plan_image">
+                  <img src="/assets/images/icon-advanced.svg" alt="Advanced" />
+                </div>
+                <div class="plan_details">
+                  <h4 class="text_blue">Advanced</h4>
+                  <p class="text_gray plan_price">$12/mo</p>
+                  <p class="text_blue plan_free_text">2 months free</p>
+                </div>
+              </div>
+              <div class="plan_box" id="Pro">
+                <div class="plan_image">
+                  <img src="/assets/images/icon-pro.svg" alt="Pro" />
+                </div>
+                <div class="plan_details">
+                  <h4 class="text_blue">Pro</h4>
+                  <p class="text_gray plan_price">$15/mo</p>
+                  <p class="text_blue plan_free_text">2 months free</p>
+                </div>
+              </div>
+            </div>
+            <div class="plans_switcher">
+              <p class="text_gray switch_monthly switch_active">Monthly</p>
+              <div class="switcher">
+                <input type="checkbox" class="switch_checkbox" />
+                <div class="switch_circle"></div>
+              </div>
+              <p class="text_gray switch_yearly">Yearly</p>
+            </div>
+          </section>
+
+          <div class="buttons">
+            <button class="btn_prev">Go Back</button>
+            <button class="btn_next">Next Step</button>
+          </div>
+        </div>
+        <!-- STEP 2 END -->
+
+        <!-- STEP 3 START -->
+        <div class="main_content content_3">
+          <section>
+            <header>
+              <h1 class="text_blue">Pick add-ons</h1>
+              <p class="text_gray">
+                Add-ons help enchance your gaming experience.
+              </p>
+            </header>
+            <div class="add_ons_wrapper">
+              <div class="add_ons_box" id="online">
+                <div class="add_ons_left">
+                  <input type="checkbox" class="add_ons_checkbox" />
+                  <article class="add_ons_desc">
+                    <h4 class="text_blue">Online service</h4>
+                    <p class="text_gray">Access to multiplayer games</p>
+                  </article>
+                </div>
+                <p class="add_ons_price">+$1/mo</p>
+              </div>
+              <div class="add_ons_box" id="larger">
+                <div class="add_ons_left">
+                  <input type="checkbox" class="add_ons_checkbox" />
+                  <article class="add_ons_desc">
+                    <h4 class="text_blue">Larger storage</h4>
+                    <p class="text_gray">Extra 1TB of cloud save</p>
+                  </article>
+                </div>
+                <p class="add_ons_price">+$2/mo</p>
+              </div>
+              <div class="add_ons_box" id="custom">
+                <div class="add_ons_left">
+                  <input type="checkbox" class="add_ons_checkbox" />
+                  <article class="add_ons_desc">
+                    <h4 class="text_blue">Customizable Profile</h4>
+                    <p class="text_gray">Custom theme on your profile</p>
+                  </article>
+                </div>
+                <p class="add_ons_price">+$2/mo</p>
+              </div>
+            </div>
+          </section>
+
+          <div class="buttons">
+            <button class="btn_prev">Go Back</button>
+            <button class="btn_next">Next Step</button>
+          </div>
+        </div>
+        <!-- STEP 3 END -->
+
+        <!-- STEP 4 START -->
+        <div class="main_content content_4">
+          <section>
+            <header>
+              <h1 class="text_blue">Finishing up</h1>
+              <p class="text_gray">
+                Double-check everything looks OK before confirming.
+              </p>
+            </header>
+            <div class="finishing_wrapper">
+              <div class="finishing_selected_plan">
+                <div class="finishing_selected_plan_desc">
+                  <h4 class="text_blue finishing_selected_plan_text">
+                    Arcade (Monthly)
+                  </h4>
+                  <a href="#">Change</a>
+                </div>
+                <h4 class="finishing_selected_plan_price text_blue">$9/mo</h4>
+              </div>
+              <hr />
+              <div class="finishing_selected_add_ons">
+                <p class="text_gray">Online service</p>
+                <p class="text_blue finishing_selected_add_ons_price">+$1/mo</p>
+              </div>
+              <div class="finishing_selected_add_ons">
+                <p class="text_gray">Larger storage</p>
+                <p class="text_blue finishing_selected_add_ons_price">+$2/mo</p>
+              </div>
+              <div class="finishing_total">
+                <p class="text_gray finishing_total_detail">
+                  Total (per month)
+                </p>
+                <h3 class="text_blue finishing_total_price">+$12/mo</h3>
+              </div>
+            </div>
+          </section>
+
+          <div class="buttons">
+            <button class="btn_prev">Go Back</button>
+            <button class="btn_confirm">Confirm</button>
+          </div>
+        </div>
+        <!-- STEP 4 END -->
+      </main>
     </div>
-    <!-- <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
   </body>
-  <script src="./script/contentHandler.js"></script>
+  <script src="./script/index.js"></script>
 </html>

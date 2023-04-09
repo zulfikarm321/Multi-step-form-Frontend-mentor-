@@ -19,103 +19,405 @@
 }
 
 body {
-  background-color: var(--Light-gray);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Magnolia);
   font-family: 'Ubuntu', sans-serif;
+  padding: 20px;
 }
 
+img {
+  max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------- */
+/* ------------------------- GLOBAL CSS START-------------------------------- */
+/* --------------------------------------------------------------------------- */
 .container {
-  max-width: min-content;
-  margin: 50px auto;
-  padding: 15px;
-  border-radius: 20px;
   display: flex;
   background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px var(--Light-gray);
+  padding: 10px;
 }
 
-.sidebar {
-  width: 300px;
-  border-radius: 10px;
-  background: url(/assets/images/bg-sidebar-desktop.svg);
+aside {
+  background-image: url(/assets/images/bg-sidebar-desktop.svg);
   background-size: cover;
-  height: 800px;
-  padding: 40px;
+  width: 300px;
+  height: 650px;
+  border-radius: 10px;
+  padding: 30px;
 }
 
-.breadcumbs {
+.step_list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 .step_wrapper {
-  width: max-content;
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.step_number {
-  width: 30px;
-  height: 30px;
-  border: 1px solid white;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+.step_wrapper span {
+  color: var(--paragraph);
 }
 
-.active {
+.step_wrapper p {
+  color: white;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.step_circle {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: ease 0.3s;
+}
+
+.step_circle_active {
   background-color: var(--bg-circle);
   color: black;
   font-weight: bold;
-  transition: ease-in 0.2s;
+  transition: ease 0.3s;
 }
 
-.step_detail_head {
+.text_blue {
+  color: var(--heading);
+}
+
+.text_gray {
   color: var(--paragraph);
-  font-size: 13px;
 }
 
-.step_detail_text {
-  color: white;
-  font-size: 16px;
+.buttons {
+  display: grid;
+  grid-template-areas: 'btn_left btn_right';
+  padding-bottom: 30px;
 }
 
-.main {
-  padding: 0 100px;
-  width: 800px;
+main {
+  margin: 50px 100px 0;
+  display: flex;
+}
+
+.main_content {
+  width: 450px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.section_button {
-  width: 100%;
+.content_1,
+.content_2,
+.content_3,
+.content_4 {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------- */
+/* -------------------------GLOBAL CSS END---------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------- */
+/* ------------------------CONTENT 1 CSS START------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+header {
+  margin-bottom: 50px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.personal_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form_control {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.form_label {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
 }
 
-.next_button {
-  background-color: var(--heading);
-  padding: 15px 30px;
-  border: none;
-  border-radius: 7px;
-  color: white;
-  cursor: pointer;
+.form_label label {
+  font-weight: 500px;
+  margin-bottom: 10px;
 }
 
-.back_button {
-  border: none;
+.form_input {
+  padding: 15px;
   border-radius: 7px;
+  border: 1px solid var(--Light-gray);
+  color: var(--heading);
+  font-weight: bold;
+}
+.form_input::placeholder {
   color: var(--paragraph);
-  cursor: pointer;
-  background-color: transparent;
+}
+
+.form_input:focus {
+  outline-color: var(--Purplish-blue);
+  color: var(--heading);
   font-weight: bold;
 }
 
-.section_content {
+.error_text {
+  color: var(--Strawberry-red);
+  font-size: 14px;
+  font-weight: bold;
+  display: none;
+}
+
+.btn_next {
+  justify-self: end;
+  width: max-content;
+  grid-area: btn_right;
+  padding: 15px 30px;
+  border-radius: 7px;
+  border: none;
+  background-color: var(--heading);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn_next:hover {
+  opacity: 0.9;
+}
+/* --------------------------------------------------------------------------- */
+/* -------------------------CONTENT 1 CSS END-------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------- */
+/* -------------------------CONTENT 2 CSS START-------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+.plans_wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-basis: 30%;
+}
+
+.plan_box {
+  width: 100%;
+  border: 1px solid var(--Light-gray);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.plan_free_text {
+  display: none;
+  margin-top: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.plan_box:hover {
+  border: 1px solid var(--Purplish-blue);
+}
+
+.plan_box_selected {
+  border: 1px solid var(--Purplish-blue);
+}
+
+.plans_switcher {
+  margin-top: 40px;
   display: flex;
   justify-content: center;
+  gap: 20px;
 }
+
+.switcher {
+  width: 40px;
+  background-color: var(--heading);
+  border-radius: 20px;
+  position: relative;
+}
+
+.switch_checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.switch_circle {
+  width: 13px;
+  height: 13px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+
+.switch_checkbox:checked ~ .switch_circle {
+  width: 13px;
+  height: 13px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 23px;
+}
+
+.switch_active {
+  color: var(--heading);
+  font-weight: bold;
+}
+
+.btn_prev {
+  justify-self: start;
+  width: max-content;
+  grid-area: btn_left;
+  border: 0;
+  background-color: transparent;
+  font-weight: bold;
+  color: var(--paragraph);
+  cursor: pointer;
+}
+
+.btn_prev:hover {
+  color: var(--heading);
+}
+/* --------------------------------------------------------------------------- */
+/* -------------------------CONTENT 2 CSS END-------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------- */
+/* -------------------------CONTENT 3 CSS START-------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+.add_ons_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add_ons_box {
+  border: 1px solid var(--Light-gray);
+  padding: 25px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add_ons_box:hover {
+  border: 1px solid var(--Purplish-blue);
+  transition: ease 0.3s;
+}
+
+.add_ons_box_active {
+  border: 1px solid var(--Purplish-blue);
+}
+
+.add_ons_checkbox {
+  accent-color: var(--Purplish-blue);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.add_ons_checkbox:checked {
+  color: var(--Purplish-blue);
+}
+
+.add_ons_left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.add_ons_desc {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.add_ons_price {
+  color: var(--Purplish-blue);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------- */
+/* -------------------------CONTENT 3 CSS END-------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------- */
+/* -------------------------CONTENT 4 CSS START-------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+.finishing_wrapper hr {
+  color: var(--Light-gray);
+  opacity: 0.5;
+}
+
+.finishing_wrapper > * {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.finishing_selected_add_ons_price {
+  font-weight: 500;
+}
+
+.finishing_total_price {
+  margin-top: 30px;
+  color: var(--Purplish-blue);
+}
+
+.btn_confirm {
+  justify-self: end;
+  width: max-content;
+  grid-area: btn_right;
+  padding: 15px 30px;
+  border-radius: 7px;
+  border: none;
+  background-color: var(--Purplish-blue);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn_confirm:hover {
+  opacity: 0.8;
+}
+/* --------------------------------------------------------------------------- */
+/* -------------------------CONTENT 4 CSS END-------------------------------- */
+/* --------------------------------------------------------------------------- */
