@@ -239,4 +239,11 @@ btnPrev.forEach((btn) => {
   };
 });
 
+const btnConfirm = document.querySelector('.btn_confirm');
+btnConfirm.onclick = () => {
+  hideContent(state);
+  state++;
+  showContent(state);
+};
+
 showContent(state);
