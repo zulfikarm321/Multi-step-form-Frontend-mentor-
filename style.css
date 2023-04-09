@@ -388,13 +388,28 @@ header h1 {
 
 .finishing_wrapper > * {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
+.finishing_total {
+  display: flex;
+  align-items: center;
+}
+
+.finishing_add_ons_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .finishing_selected_add_ons_price {
   font-weight: 500;
+}
+
+.finishing_selected_add_ons {
+  display: flex;
+  justify-content: space-between;
 }
 
 .finishing_total_price {
