@@ -442,6 +442,7 @@ header h1 {
 .final_section {
   text-align: center;
   margin: auto;
+  display: flex;
   gap: 15px;
   flex-direction: column;
   justify-content: center;
