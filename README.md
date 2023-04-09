@@ -7,8 +7,8 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://zulfikarm321.github.io/Multi-step-form-Frontend-mentor-/)
+- Solution URL: [Solution URL](https://your-solution-url.com)
+- Live Site URL: [github pages](https://zulfikarm321.github.io/Multi-step-form-Frontend-mentor-/)
 
 ### The challenge
 
@@ -36,5 +36,5 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Instagram - [@yourusername](https://www.instagram.com/zulfikar_muhamad_/)
+- Frontend Mentor - [@zulfikarm321](https://www.frontendmentor.io/profile/zulfikarm321)
+- Instagram - [@zulfikar_muhamad_](https://www.instagram.com/zulfikar_muhamad_/)
