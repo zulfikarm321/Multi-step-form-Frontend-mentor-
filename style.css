@@ -44,7 +44,7 @@ img {
 }
 
 aside {
-  background-image: url(/assets/images/bg-sidebar-desktop.svg);
+  background-image: url(assets/images/bg-sidebar-desktop.svg);
   background-size: cover;
   width: 300px;
   height: 650px;
